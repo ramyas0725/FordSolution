@@ -26,4 +26,15 @@ class FordSolutionTest {
         assertEquals("XLV",intToRoman(45))
         assertEquals("XIV",intToRoman(14))
     }
+
+    @Test
+    fun testIntToRomanWhenNumIsZero(){
+        assertEquals("",intToRoman(0))
+    }
+
+    @Test
+    fun testIntToRomanWhenNumIsNegative(){
+        assertEquals("",intToRoman(-4))
+    }
+
 }
