@@ -36,5 +36,16 @@ class FordSolutionTest {
     fun testIntToRomanWhenNumIsNegative(){
         assertEquals("",intToRoman(-4))
     }
+    @Test
+    fun testIntToRomanWhenNumIsLessThan1000(){
+        assertEquals("CCCLVI",intToRoman(356))
+        assertEquals("DCLXX",intToRoman(670))
+        assertEquals("DCCCLXXI",intToRoman(871))
+        assertEquals("D",intToRoman(500))
+        assertEquals("CXXII",intToRoman(122))
+        assertEquals("CMXCIX",intToRoman(999))
+        assertEquals("CDL",intToRoman(450))
+
+    }
 
 }
