@@ -47,5 +47,16 @@ class FordSolutionTest {
         assertEquals("CDLI",intToRoman(451))
 
     }
+    @Test
+    fun testIntToRomanWhenNumIsGreaterThan1000(){
+        assertEquals("MM",intToRoman(2000))
+        assertEquals("MD",intToRoman(1500))
+        assertEquals("MMMD",intToRoman(3500))
+        assertEquals("MMMMM",intToRoman(5000))
+        assertEquals("MMCCCXLV",intToRoman(2345))
+        assertEquals("MMMMMDXCIII",intToRoman(5593))
+        assertEquals("MCCXXII",intToRoman(1222))
+
+    }
 
 }
