@@ -12,7 +12,18 @@ import org.junit.Assert.*
  */
 class FordSolutionTest {
     @Test
-    fun testIntToRomanWhenNumIsPositive(){
+    fun testIntToRomanWhenNumIsLessThanTen(){
         assertEquals("II",intToRoman(2))
+        assertEquals("VII",intToRoman(7))
+        assertEquals("V",intToRoman(5))
+        assertEquals("IX",intToRoman(9))
+    }
+
+    @Test
+    fun testIntToRomanWhenNumIsLessThanFifty(){
+        assertEquals("XXXV",intToRoman(35))
+        assertEquals("XXVII",intToRoman(27))
+        assertEquals("XLV",intToRoman(45))
+        assertEquals("XIV",intToRoman(14))
     }
 }
