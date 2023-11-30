@@ -20,5 +20,28 @@ class FordSolution {
             }
             return output.toString()
         }
+
+        fun romanToInt(roman: String): Int {
+
+            val romanToIntMap =
+                mapOf("I" to 1, "V" to 5, "X" to 10, "L" to 50, "C" to 100, "D" to 500, "M" to 1000)
+            var output = 0
+            var previousVal = 0
+//input XX
+            for (char in roman.reversed()) {
+                val currentVal = romanToIntMap[char.toString()]
+                if (currentVal != null) {
+
+                    if (currentVal < previousVal) {
+                        output -= currentVal
+                    } else {
+                        output += currentVal
+                    }
+                    previousVal = currentVal
+                }
+            }
+            return output
+        }
+
     }
 }
